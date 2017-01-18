@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://run.plnkr.co/rJoe7TbRciFHJhIT/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><script src="angular.min.js"></script>
+  </head><body>
+    <div ng-app="myApp" ng-controller="myCtrl" class="ng-scope">
+    <p class="ng-binding">SAI RAM</p>
+    <p class="ng-binding">sai ram</p>
+    <p class="ng-binding">$100.00</p>
+    <p class="ng-binding">Jan 1, 2017</p>
+    <p><input type="text" ng-model="i1" class="ng-pristine ng-untouched ng-valid"></p>
+    <ol>
+      <!-- ngRepeat: x in list_of_names | filter:i1 --><li ng-repeat="x in list_of_names | filter:i1" class="ng-binding ng-scope">
+        john
+      </li><!-- end ngRepeat: x in list_of_names | filter:i1 --><li ng-repeat="x in list_of_names | filter:i1" class="ng-binding ng-scope">
+        abraham
+      </li><!-- end ngRepeat: x in list_of_names | filter:i1 --><li ng-repeat="x in list_of_names | filter:i1" class="ng-binding ng-scope">
+        leo
+      </li><!-- end ngRepeat: x in list_of_names | filter:i1 --><li ng-repeat="x in list_of_names | filter:i1" class="ng-binding ng-scope">
+        bernard
+      </li><!-- end ngRepeat: x in list_of_names | filter:i1 -->
+    </ol>
+    <p>Enter a string:<input type="text" place-holder="actual_string" ng-model="astring" class="ng-valid ng-dirty ng-valid-parse ng-touched"></p>
+    <input type="button" ng-click="reverse(astring)" name="reverse" value="Reverse" ng-model="rev" class="ng-pristine ng-valid ng-touched">
+     <p class="ng-binding">Reverse of a given string:undefinedyyoiu</p>
+    </div>
+    <script>
+      var app=angular.module("myApp",[]);
+      app.controller("myCtrl",function($scope){
+        $scope.name='sai ram';
+        $scope.price=100;
+        $scope.date1='2017-01-01';
+        $scope.list_of_names = ['john','abraham','leo','bernard'];
+        $scope.reverse=function(x){
+         
+          var i,txt="",j;
+          for(i=x.length;i>=0;i--)
+          {
+            txt+=x[i];
+          }
+          $scope.rev= txt;
+          
+          
+        }
+       
+      });
+    </script>
+  
+
+</body></html>
